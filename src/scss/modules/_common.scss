@@ -25,7 +25,7 @@ body, main {
 
 @font-face {
   font-family: "ProximaNova-SemiBold";
-  //src: url("/fonts/ProximaNova-Semibold.ttf") format('truetype');
+  src: url("/fonts/ProximaNova-Semibold.ttf") format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -33,11 +33,20 @@ body, main {
 
 @font-face {
   font-family: "WixMadeforText-SemiBold";
-  //src: url("/fonts/WixMadeforText-SemiBold.ttf") format('truetype');
+  src: url("/fonts/WixMadeforText-SemiBold.ttf") format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "FuturaPT-Demi";
+  src: url("/fonts/FuturaPT-Demi.ttf") format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 html, body {

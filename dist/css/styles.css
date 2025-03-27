@@ -25,12 +25,21 @@ body, main {
 }
 @font-face {
   font-family: "ProximaNova-SemiBold";
+  src: url("/fonts/ProximaNova-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "WixMadeforText-SemiBold";
+  src: url("/fonts/WixMadeforText-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FuturaPT-Demi";
+  src: url("/fonts/FuturaPT-Demi.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -559,7 +568,7 @@ body {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   background-color: #3498db;
-  font: 600 14px/16px "ProximaNova-Regular", sans-serif;
+  font: 600 14px/16px "WixMadeforText-SemiBold", sans-serif;
   color: #fff;
 }
 .card__make-bet-btn:hover {
@@ -596,7 +605,7 @@ body {
   color: #333;
 }
 .card__content-coefficient span {
-  font: 600 20px/24px "ProximaNova-Regular", sans-serif;
+  font: 600 20px/24px "FuturaPT-Demi", sans-serif;
   color: rgba(0, 0, 0, 0.8);
 }
 .card__forecast-content {
