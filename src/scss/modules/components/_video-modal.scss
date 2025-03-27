@@ -1,0 +1,68 @@
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 1000;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__close-video {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 20px;
+    z-index: 50;
+
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background-color: #fff;
+      transition: 0.3s;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &:hover::before, &:hover::after {
+      background-color: #2F80ED;
+    }
+  }
+
+}
+
+.active-video {
+  overflow: hidden;
+  padding-right: 17px;
+
+  .video-modal {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .video-modal {
+    &__close-video {
+      top: 40px;
+      right: 40px;
+    }
+  }
+}
