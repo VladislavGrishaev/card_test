@@ -508,14 +508,21 @@ body {
 .card__forecast-info {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 1fr 16px auto 16px auto;
+  grid-template-columns: 1fr auto auto;
+  grid-template-areas: "forecast-content coefficient-wrap make-bet-btn";
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
   margin: 0 -24px;
-  padding: 25px 24px;
+  padding: 25px 24px 25px 22px;
   border-left: 2px solid #3498db;
   background-color: rgba(240, 241, 242, 0.4);
 }
 .card__logo-coef {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 32px;
   height: 32px;
   margin: 0 12px 0 0;
@@ -537,6 +544,9 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 .card__make-bet-btn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: make-bet-btn;
   padding: 12px 17px;
   border-radius: 4px;
   -webkit-transition: 0.2s;
@@ -549,6 +559,9 @@ body {
   background-color: #47aef1;
 }
 .card__coefficient-wrap {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: coefficient-wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -563,7 +576,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 16px 0 0;
 }
 .card__content-coefficient p {
   display: -webkit-inline-box;
@@ -581,6 +593,9 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 .card__forecast-content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: forecast-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -694,6 +709,28 @@ body {
   }
   .card__content-coefficient--desktop {
     display: none;
+  }
+  .card__forecast-info {
+    -ms-grid-columns: 1fr 12px auto;
+    grid-template-columns: 1fr auto;
+    -ms-grid-rows: auto 16px auto;
+    grid-template-areas: "forecast-content coefficient-wrap" "make-bet-btn make-bet-btn";
+    gap: 16px 12px;
+    margin: 0 -16px;
+    padding: 16px 16px 16px 14px;
+  }
+  .card__make-bet-btn {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .card__coefficient-wrap {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .card__forecast-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
   }
 }
 @media screen and (max-width: 743px) {

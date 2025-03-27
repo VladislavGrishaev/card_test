@@ -181,14 +181,19 @@ body {
 
   &__forecast-info {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas:
+  "forecast-content coefficient-wrap make-bet-btn";
+    align-items: center;
+    gap: 16px;
     margin: 0 -24px;
-    padding: 25px 24px;
+    padding: 25px 24px 25px 22px;
     border-left: 2px solid #3498db;
     background-color: rgba(240, 241, 242, 0.4);;
   }
 
   &__logo-coef {
+    flex-shrink: 0;
     width: 32px;
     height: 32px;
     margin: 0 12px 0 0;
@@ -214,6 +219,7 @@ body {
   }
 
   &__make-bet-btn {
+    grid-area: make-bet-btn;
     padding: 12px 17px;
     border-radius: 4px;
     transition: 0.2s;
@@ -227,6 +233,7 @@ body {
   }
 
   &__coefficient-wrap {
+    grid-area: coefficient-wrap;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -234,7 +241,6 @@ body {
 
   &__content-coefficient {
     display: flex;
-    margin: 0 16px 0 0;
 
     p {
       display: inline-flex;
@@ -250,6 +256,7 @@ body {
   }
 
   &__forecast-content {
+    grid-area: forecast-content;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -385,7 +392,25 @@ body {
         display: none;
       }
     }
+
+    &__forecast-info {
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "forecast-content coefficient-wrap"
+        "make-bet-btn make-bet-btn";
+      gap: 16px 12px;
+      margin: 0 -16px;
+      padding: 16px 16px 16px 14px;
+    }
+
+
+
+
+
+
+
+
+
+
   }
-
-
 }
