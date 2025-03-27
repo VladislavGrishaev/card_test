@@ -1,6 +1,9 @@
-@use "common";
+@use '../scss/modules/_common';
 
-
+.card {
+  max-width: 768px;
+  width: 100%;
+}
 
 
 
