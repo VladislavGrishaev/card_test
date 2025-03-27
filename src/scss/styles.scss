@@ -82,14 +82,9 @@ body {
       }
     }
 
-
     &--font-light {
       font: 400 12px/14px "ProximaNova-Regular", sans-serif;
     }
-
-    //&--font-bold {
-    //  font: 600 14px/16px "ProximaNova-SemiBold", sans-serif;
-    //}
 
     &--green {
       color: #62b435;
@@ -125,10 +120,23 @@ body {
 
   &__content {
     position: relative;
+
+    &.active-full-content {
+      .card__text-content::after {
+        display: none;
+      }
+
+      .card__text-content p {
+        -webkit-line-clamp: unset;
+      }
+
+      .card__show-more-btn {
+        transform: rotate(180deg);
+      }
+    }
   }
 
   &__text-content {
-
     padding: 20px 0 24px 0;
 
 
@@ -139,6 +147,7 @@ body {
       overflow: hidden;
       color: rgba(0, 0, 0, 0.6);
     }
+
 
     &::after {
       content: '';
@@ -163,6 +172,7 @@ body {
     height: 40px;
     margin: 0 auto;
     border-radius: 50%;
+    transition: 0.3s;
     box-shadow: 2px 4px 12px 0 rgba(0, 0, 0, 0.08);
     background: #fff url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011.23%206.23%22%3E%3Cpath%20d%3D%22M.56.56a.63.63%2C0%2C0%2C1%2C.88%2C0L6%2C5.12%2C10.56.56a.63.63%2C0%2C0%2C1%2C.88%2C0%2C.62.62%2C0%2C0%2C1%2C0%2C.87l-5%2C5a.63.63%2C0%2C0%2C1-.88%2C0l-5-5A.62.62%2C0%2C0%2C1%2C.56.56Z%22%20transform%3D%22translate(-0.38%20-0.38)%22%20style%3D%22fill-opacity%3A0.4000000059604645%3Bfill-rule%3Aevenodd%22%2F%3E%3C%2Fsvg%3E") no-repeat center;
     background-size: 11px 6px;
