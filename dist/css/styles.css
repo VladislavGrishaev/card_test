@@ -18,14 +18,21 @@ body, main {
 
 @font-face {
   font-family: "ProximaNova-Regular";
-  src: url("/fonts/ProximaNova-Regular.ttf") format("ttf");
+  src: url("/fonts/ProximaNova-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "ProximaNova-SemiBold";
-  src: url("/fonts/ProximaNova-Semibold.ttf") format("ttf");
+  src: url("/fonts/ProximaNova-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "WixMadeforText-SemiBold";
+  src: url("/fonts/WixMadeforText-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -483,7 +490,7 @@ body {
 }
 .card__show-more-btn {
   position: absolute;
-  bottom: -44px;
+  bottom: -20px;
   left: 0;
   right: 0;
   width: 40px;
@@ -498,7 +505,97 @@ body {
   background-size: 11px 6px;
   z-index: 2;
 }
+.card__forecast-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 -24px;
+  padding: 25px 24px;
+  border-left: 2px solid #3498db;
+  background-color: rgba(240, 241, 242, 0.4);
+}
+.card__logo-coef {
+  width: 32px;
+  height: 32px;
+  margin: 0 12px 0 0;
+}
+.card__logo-coef img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.card__title-forecast {
+  display: inline-block;
+  text-transform: uppercase;
+  font: 600 12px/14px "ProximaNova-SemiBold", sans-serif;
+  color: rgba(0, 0, 0, 0.4);
+}
+.card__desc-forecast {
+  font: 600 18px/20px "ProximaNova-SemiBold", sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+}
+.card__make-bet-btn {
+  padding: 12px 17px;
+  border-radius: 4px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #3498db;
+  font: 600 14px/16px "ProximaNova-Regular", sans-serif;
+  color: #fff;
+}
+.card__make-bet-btn:hover {
+  background-color: #47aef1;
+}
+.card__coefficient-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.card__content-coefficient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 16px 0 0;
+}
+.card__content-coefficient p {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font: 400 12px/14px "ProximaNova-Regular", sans-serif;
+  color: #333;
+}
+.card__content-coefficient span {
+  font: 600 20px/24px "ProximaNova-Regular", sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+}
+.card__forecast-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}
 
+@media screen and (min-width: 744px) {
+  .card__content-coefficient--device {
+    display: none;
+  }
+}
 @media screen and (max-width: 743px) {
   .card {
     padding: 16px 16px 12px 16px;
@@ -595,8 +692,10 @@ body {
   .card__show-more-btn {
     bottom: -22px;
   }
+  .card__content-coefficient--desktop {
+    display: none;
+  }
 }
-
 @media screen and (max-width: 743px) {
   .card__avatar {
     -ms-grid-row: 1;
