@@ -36,7 +36,7 @@ html, body {
 }
 
 html, body, a, button {
-  font-family: "ProximaNova-Regular", sans-serif;
+  font: 400 16px/24px "ProximaNova-Regular", sans-serif;
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -382,7 +382,7 @@ body {
 .card__user-name h4 {
   font: 600 14px/16px "ProximaNova-SemiBold", sans-serif;
 }
-.card__statistics {
+.card__profile-statistics {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -444,6 +444,47 @@ body {
 .card__number-statistics--gray {
   color: rgba(0, 0, 0, 0.4);
 }
+.card__content {
+  position: relative;
+}
+.card__text-content {
+  padding: 20px 0 24px 0;
+}
+.card__text-content p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.6);
+}
+.card__text-content::after {
+  content: "";
+  position: absolute;
+  bottom: 27px;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 27px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  z-index: 1;
+}
+.card__show-more-btn {
+  position: absolute;
+  bottom: -44px;
+  left: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 4px 12px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 2px 4px 12px 0 rgba(0, 0, 0, 0.08);
+  background: #fff url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011.23%206.23%22%3E%3Cpath%20d%3D%22M.56.56a.63.63%2C0%2C0%2C1%2C.88%2C0L6%2C5.12%2C10.56.56a.63.63%2C0%2C0%2C1%2C.88%2C0%2C.62.62%2C0%2C0%2C1%2C0%2C.87l-5%2C5a.63.63%2C0%2C0%2C1-.88%2C0l-5-5A.62.62%2C0%2C0%2C1%2C.56.56Z%22%20transform%3D%22translate(-0.38%20-0.38)%22%20style%3D%22fill-opacity%3A0.4000000059604645%3Bfill-rule%3Aevenodd%22%2F%3E%3C%2Fsvg%3E") no-repeat center;
+  background-size: 11px 6px;
+  z-index: 2;
+}
 
 @media screen and (max-width: 743px) {
   .card {
@@ -454,6 +495,7 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    padding: 0 0 16px 0;
   }
   .card__profile {
     -ms-grid-columns: auto 8px 1fr;
@@ -492,7 +534,7 @@ body {
   .card__statistics-item:not(:has(.roi-statistics)) .card__title-statistics {
     display: none;
   }
-  .card__statistics {
+  .card__profile-statistics {
     gap: 13px;
   }
   .card .roi-statistics {
@@ -530,6 +572,15 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
+  }
+  .card__text-content {
+    padding: 16px 0;
+  }
+  .card__text-content::after {
+    bottom: 20px;
+  }
+  .card__show-more-btn {
+    bottom: -22px;
   }
 }
 
