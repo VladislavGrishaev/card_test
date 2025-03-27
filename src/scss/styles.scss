@@ -138,6 +138,7 @@ body {
       }
 
       .card__text-content p {
+        max-height: 500px;
         -webkit-line-clamp: unset;
       }
 
@@ -152,10 +153,14 @@ body {
 
 
     p {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 5;
+      //display: -webkit-box;
+      //-webkit-box-orient: vertical;
+      //-webkit-line-clamp: 5;
+      will-change: max-height;
+      max-height: 7.5em;
+      transition: max-height 0.5s linear;
       overflow: hidden;
+      line-height: 1.5em;
       color: rgba(0, 0, 0, 0.6);
     }
 
@@ -414,6 +419,9 @@ body {
       padding: 16px 16px 16px 14px;
     }
 
+    &__coefficient-wrap {
+      align-self: self-end;
+    }
 
   }
 }

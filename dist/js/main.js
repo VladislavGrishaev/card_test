@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){document.querySelector(".card__show-more-btn").addEventListener("click",function(){document.querySelector(".card__content").classList.toggle("active-full-content")})});//# sourceMappingURL=main.js.map
+"use strict";document.addEventListener("DOMContentLoaded",function(){var e,t;e=document.querySelector(".card__show-more-btn"),t=document.querySelector(".card__content"),e.addEventListener("click",function(){t.classList.toggle("active-full-content")})});//# sourceMappingURL=main.js.map

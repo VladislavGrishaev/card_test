@@ -64,6 +64,6 @@ export const watch = () => {
 };
 
 export default gulp.series(
-    gulp.parallel(html, styles, scripts, images, fonts),
+    gulp.parallel(html, styles, scripts, images),
     watch
 );

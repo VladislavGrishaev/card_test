@@ -474,6 +474,7 @@ body {
   display: none;
 }
 .card__content.active-full-content .card__text-content p {
+  max-height: 500px;
   -webkit-line-clamp: unset;
 }
 .card__content.active-full-content .card__show-more-btn {
@@ -485,10 +486,12 @@ body {
   padding: 20px 0 24px 0;
 }
 .card__text-content p {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  will-change: max-height;
+  max-height: 7.5em;
+  -webkit-transition: max-height 0.5s linear;
+  transition: max-height 0.5s linear;
   overflow: hidden;
+  line-height: 1.5em;
   color: rgba(0, 0, 0, 0.6);
 }
 .card__text-content::after {
@@ -734,6 +737,11 @@ body {
     gap: 16px 12px;
     margin: 0 -16px;
     padding: 16px 16px 16px 14px;
+  }
+  .card__coefficient-wrap {
+    -ms-flex-item-align: self-end;
+    -ms-grid-row-align: self-end;
+    align-self: self-end;
   }
   .card__make-bet-btn {
     -ms-grid-row: 3;
