@@ -4,9 +4,22 @@ body {
   background-color: #ccc;
 }
 
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(80, 78, 78, .5);
+  z-index: 999;
+}
+
 .card {
   max-width: 768px;
   width: 100%;
+  max-height: 95vh;
+  overflow: hidden auto;
   padding: 24px 24px 16px 24px;
   background-color: #fff;
   border-radius: 8px;
@@ -19,8 +32,6 @@ body {
   }
 
   &__profile {
-    //display: flex;
-    //align-items: center;
     display: grid;
     grid-template-columns: auto 1fr 1fr;
     align-items: center;
@@ -263,6 +274,7 @@ body {
   }
 }
 
+
 @media screen and (min-width: 744px) {
   .card {
     &__content-coefficient {
@@ -402,14 +414,6 @@ body {
       margin: 0 -16px;
       padding: 16px 16px 16px 14px;
     }
-
-
-
-
-
-
-
-
 
 
   }

@@ -17,7 +17,7 @@ body, main {
 
 @font-face {
   font-family: "ProximaNova-Regular";
-  src: url("/fonts/ProximaNova-Regular.ttf") format('truetype');;
+  src: url("/fonts/ProximaNova-Regular.woff") format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@ body, main {
 
 @font-face {
   font-family: "ProximaNova-SemiBold";
-  src: url("/fonts/ProximaNova-Semibold.ttf") format('truetype');;
+  //src: url("/fonts/ProximaNova-Semibold.ttf") format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -33,7 +33,7 @@ body, main {
 
 @font-face {
   font-family: "WixMadeforText-SemiBold";
-  src: url("/fonts/WixMadeforText-SemiBold.ttf") format('truetype');;
+  //src: url("/fonts/WixMadeforText-SemiBold.ttf") format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -47,15 +47,12 @@ html, body {
 
 
 html, body, a, button {
-  font: 400 16px/24px "ProximaNova-Regular", sans-serif;
+  font: 400 16px/24px "ProximaNova-Regular";
   color: #000000CC;
 }
 
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   max-width: 1440px;
   height: 100%;
   width: 100%;
