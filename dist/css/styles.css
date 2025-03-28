@@ -16,6 +16,10 @@ body, main {
   height: 100%;
 }
 
+body {
+  background-color: #ccc;
+}
+
 @font-face {
   font-family: "ProximaNova-Regular";
   src: url("/fonts/ProximaNova-Regular.woff") format("woff");
@@ -336,10 +340,6 @@ table {
   border-spacing: 0;
 }
 
-body {
-  background-color: #ccc;
-}
-
 .modal {
   position: fixed;
   inset: 0;
@@ -469,13 +469,10 @@ body {
 }
 .card__content {
   position: relative;
+  padding: 20px 0 24px 0;
 }
 .card__content.active-full-content .card__text-content::after {
   display: none;
-}
-.card__content.active-full-content .card__text-content p {
-  max-height: 500px;
-  -webkit-line-clamp: unset;
 }
 .card__content.active-full-content .card__show-more-btn {
   -webkit-transform: rotate(180deg);
@@ -483,13 +480,12 @@ body {
   transform: rotate(180deg);
 }
 .card__text-content {
-  padding: 20px 0 24px 0;
+  will-change: max-height;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
 }
 .card__text-content p {
-  will-change: max-height;
-  max-height: 7.5em;
-  -webkit-transition: max-height 0.5s linear;
-  transition: max-height 0.5s linear;
   overflow: hidden;
   line-height: 1.5em;
   color: rgba(0, 0, 0, 0.6);
@@ -717,9 +713,6 @@ body {
     justify-content: space-between;
     width: 100%;
   }
-  .card__text-content {
-    padding: 16px 0;
-  }
   .card__text-content::after {
     bottom: 20px;
   }
@@ -728,6 +721,9 @@ body {
   }
   .card__content-coefficient--desktop {
     display: none;
+  }
+  .card__content {
+    padding: 16px 0;
   }
   .card__forecast-info {
     -ms-grid-columns: 1fr 12px auto;

@@ -15,6 +15,11 @@ body, main {
   height: 100%;
 }
 
+body {
+  background-color: #ccc;
+}
+
+
 @font-face {
   font-family: "ProximaNova-Regular";
   src: url("/fonts/ProximaNova-Regular.woff") format('woff');
